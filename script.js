@@ -61,7 +61,7 @@ $("restart-btn").addEventListener("click", () => {
   else showScreen("screen-celebration");
 });
 $("wish-btn").addEventListener("click", () => {
-  $("wish-note").textContent = "Wish sent to the universe! May something lovely find you. ✨";
+  $("wish-note").textContent = "♡♡♡";
   launchConfetti(100);
 });
 $("envelope-btn").addEventListener("click", () => {
