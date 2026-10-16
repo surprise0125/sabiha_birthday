@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffd8e8">
+  <meta name="description" content="A little birthday surprise made just for Sabiha.">
+  <title>A Little Surprise for Sabiha ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <div class="progress" aria-label="Surprise progress"><span id="progress-fill"></span></div>
+    <header class="mini-header"><span class="heart">♡</span><span id="step-label">A LITTLE SURPRISE</span><span class="heart">♡</span></header>
+    <p id="preview-banner" class="preview-banner" hidden>DEVELOPER PREVIEW · VISITOR COUNTDOWN IS UNCHANGED</p>
+
+    <section class="screen active" id="screen-countdown" aria-labelledby="countdown-title">
+      <div class="window countdown-window">
+        <div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span>LOCKED.GIFT</span></div>
+        <div class="content countdown-content">
+          <div class="lock-art" aria-hidden="true">🔒<span>♡</span></div>
+          <p class="eyebrow">A SURPRISE IS WAITING</p>
+          <h1 id="countdown-title">For Sabiha<span class="pink-heart"> ♡</span></h1>
+          <p class="copy">Your birthday surprise is locked until the special moment. Come back when the countdown reaches zero. 🎀</p>
+          <div class="countdown big-countdown" aria-label="Time until birthday">
+            <div><strong id="days">00</strong><small>DAYS</small></div>
+            <div><strong id="hours">00</strong><small>HOURS</small></div>
+            <div><strong id="minutes">00</strong><small>MINS</small></div>
+            <div><strong id="seconds">00</strong><small>SECS</small></div>
+          </div>
+          <div class="lock-status" id="lock-status"><span class="lock-dot"></span> THE GIFT IS LOCKED</div>
+          <p class="small-note">Unlocks automatically on 24 October 2026 at 12:00 AM Bangladesh time.</p>
+          <div class="locked-button" aria-disabled="true">WAIT FOR THE SURPRISE <span>🔒</span></div>
+          <p class="small-note">No button or repeated tap can skip the countdown.</p>
+          <div class="developer-tools" id="developer-tools" hidden>
+            <p class="dev-label">🛠 DEVELOPER PREVIEW MODE</p>
+            <p class="small-note">শুধু ডিজাইন পরীক্ষা করার জন্য। Visitor Mode-এর countdown অপরিবর্তিত থাকবে।</p>
+            <div class="dev-grid">
+              <button class="button secondary dev-jump" data-preview="screen-celebration">Celebration</button>
+              <button class="button secondary dev-jump" data-preview="screen-cake">Cake</button>
+              <button class="button secondary dev-jump" data-preview="screen-gallery">Gallery</button>
+              <button class="button secondary dev-jump" data-preview="screen-letter">Letter</button>
+              <button class="button secondary dev-jump" data-preview="screen-finale">Final page</button>
+            </div>
+            <button class="text-button" id="developer-exit">Exit preview</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-celebration" aria-labelledby="celebration-title" hidden>
+      <div class="window celebration-window">
+        <div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span>CELEBRATION.EXE</span></div>
+        <div class="content celebration-content">
+          <div class="celebrate-art" aria-hidden="true">🎉🎂🎉</div>
+          <p class="eyebrow">IT'S YOUR SPECIAL DAY</p>
+          <h1 id="celebration-title">Happy Birthday,<br><span>Sabiha!</span> 💗</h1>
+          <p class="copy">The wait is over! Your little birthday world is ready. May your day be filled with sweet moments, laughter and lovely surprises. ✨</p>
+          <div class="sparkle-line">──── ✦ ♡ ✦ ────</div>
+          <button class="button primary next" data-next="screen-cake">ENTER YOUR SURPRISE <span>→</span></button>
+          <p class="small-note">Your birthday surprise begins now. ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-cake" aria-labelledby="cake-title" hidden>
+      <div class="window">
+        <div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span>CAKE.EXE</span></div>
+        <div class="content">
+          <p class="eyebrow">MAKE A WISH</p>
+          <h2 id="cake-title">A cake for you!</h2>
+          <p class="copy">Close your eyes for a second and make a little wish. ✨</p>
+          <div class="cake-scene" role="img" aria-label="Cute animated birthday cake">
+            <div class="candles"><span>🕯️</span><span>🕯️</span><span>🕯️</span></div>
+            <div class="cake-top">🍓 ✨ 🍓</div><div class="cake-layer"></div><div class="icing"></div><div class="cake-bottom"></div><div class="plate"></div>
+          </div>
+          <button class="button secondary" id="wish-btn">✨ MAKE A WISH</button>
+          <p class="small-note" id="wish-note">Your wish is between you and the universe. ♡</p>
+          <button class="button primary next" data-next="screen-gallery">NEXT: MEMORIES →</button>
+          <button class="text-button back" data-back="screen-celebration">← Back</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-gallery" aria-labelledby="gallery-title" hidden>
+      <div class="window">
+        <div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span>GALLERY.EXE</span></div>
+        <div class="content">
+          <p class="eyebrow">LITTLE MOMENTS</p>
+          <h2 id="gallery-title">A mini gallery 📸</h2>
+          <p class="copy">A few lovely moments to keep close. Add your own photos to make this page personal.</p>
+          <div class="gallery">
+            <figure class="photo placeholder"><img src="assets/photos/photo1.jpg" alt="Memory one" onerror="this.hidden=true;this.parentElement.classList.add('empty-photo')"><figcaption>little memory ♡</figcaption></figure>
+            <figure class="photo placeholder"><img src="assets/photos/photo2.jpg" alt="Memory two" onerror="this.hidden=true;this.parentElement.classList.add('empty-photo')"><figcaption>pretty moments ✿</figcaption></figure>
+            <figure class="photo placeholder"><img src="assets/photos/photo3.jpg" alt="Memory three" onerror="this.hidden=true;this.parentElement.classList.add('empty-photo')"><figcaption>keep smiling ✨</figcaption></figure>
+          </div>
+          <p class="small-note">Add photo1.jpg, photo2.jpg and photo3.jpg in assets/photos.</p>
+          <button class="button primary next" data-next="screen-letter">NEXT: YOUR LETTER →</button>
+          <button class="text-button back" data-back="screen-cake">← Back</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-letter" aria-labelledby="letter-title" hidden>
+      <div class="window">
+        <div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span>LETTER.EXE</span></div>
+        <div class="content">
+          <p class="eyebrow">A NOTE JUST FOR YOU</p>
+          <h2 id="letter-title">A little birthday letter 💌</h2>
+          <p class="copy">Tap the envelope to open your message.</p>
+          <button class="envelope" id="envelope-btn" aria-expanded="false"><span>💗</span><small>TAP TO OPEN</small></button>
+          <article class="letter" id="letter-content" hidden>
+            <h3>Dear Sabiha, 🌷</h3>
+            <p>Happy Birthday! I hope today brings you lots of reasons to smile and reminds you how special you are.</p>
+            <p>May the year ahead be full of lovely surprises, laughter, good health, and dreams coming true. Keep being your wonderful self and keep shining in your own way.</p>
+            <p>Have the sweetest birthday. Stay happy, stay wonderful, and never forget that you deserve beautiful things. ♡</p>
+            <p class="signoff">With warm wishes,<br><strong>Someone who wanted to make you smile ♡</strong></p>
+          </article>
+          <button class="button primary next" data-next="screen-finale">ONE LAST SURPRISE →</button>
+          <button class="text-button back" data-back="screen-gallery">← Back</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-finale" aria-labelledby="final-title" hidden>
+      <div class="window">
+        <div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span>LOVE.EXE</span></div>
+        <div class="content">
+          <div class="final-art" aria-hidden="true">💗 ✨ 💗</div>
+          <p class="eyebrow">HAPPY BIRTHDAY</p>
+          <h2 id="final-title">Keep smiling, Sabiha!</h2>
+          <p class="copy">I hope this little surprise made your day a bit brighter. You deserve a day full of warmth and happiness. 🌷</p>
+          <button class="button primary" id="confetti-btn">🎉 SEND SOME CONFETTI</button>
+          <button class="button secondary" id="restart-btn">↺ BACK TO COUNTDOWN</button>
+          <button class="text-button back" data-back="screen-letter">← Back to letter</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>MADE WITH ♡ FOR SABIHA</footer>
+  </main>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
