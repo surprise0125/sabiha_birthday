@@ -3,7 +3,7 @@
    To use another birthday year/time, edit BIRTHDAY_UNLOCK below. */
 const BIRTHDAY_UNLOCK = "2026-10-24T00:00:00+06:00";
 const screens = ["screen-countdown","screen-celebration","screen-cake","screen-gallery","screen-letter","screen-finale"];
-const labels = ["GIFT LOCKED","HAPPY BIRTHDAY","MAKE A WISH","LITTLE MOMENTS","A NOTE FOR YOU","FINAL SURPRISE"];
+const labels = ["SABU","HAPPY BIRTHDAY","MAKE A WISH","LITTLE MOMENTS","A NOTE FOR YOU","FINAL SURPRISE"];
 let current = 0;
 let unlocked = Date.now() >= new Date(BIRTHDAY_UNLOCK).getTime();
 let celebrationStarted = false;
